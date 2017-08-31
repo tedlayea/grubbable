@@ -1,0 +1,12 @@
+<%= link_to "Edit User Information",edit_user_registration_path%>
+<%=current_user.first_name%>
+
+<p>Click <%= link_to "here",posts_path%> to see all posts</p>
+
+<h2>Friends</h2>
+<% @users.each do |user| %>
+<span>
+  <img width="30px" src="http://ornithology.ucc.ie/wp-content/uploads/sites/41/2015/10/Unknown-person.gif" alt="photo">
+  <%= link_to user.email, individual_path(user.id) %>
+</span>
+<% end %>

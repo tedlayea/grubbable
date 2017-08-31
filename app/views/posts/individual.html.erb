@@ -1,0 +1,12 @@
+<%= link_to "Back", :root %>
+<h1>Post by   <%= @user.first_name %> </h1>
+
+
+<% @user.posts.each do |post|%>
+  <h3><%= post.title%>: <%= post.body%></h3>
+  <p>
+    <% post.comments.each do |comment|%>
+      <%= comment.reply%>  
+    <%end%>
+  </p>
+<%end%>

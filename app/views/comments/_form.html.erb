@@ -1,0 +1,7 @@
+<%= form_for [@post, @comment] do |f| %>
+  <%= f.label :reply %>
+  <%= f.text_field :reply %>
+
+  <%= f.submit %>
+<% end %>
+<p><%= link_to "Cancel", posts_path %></p>
